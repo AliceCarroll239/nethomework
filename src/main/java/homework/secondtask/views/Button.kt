@@ -1,6 +1,6 @@
 package homework.secondtask.views
 
-class Button(val text: String): View() {
+class Button(text: String): TextView(text) {
 
     override fun click() {
         println(text)

@@ -20,7 +20,7 @@ class ViewsTest {
             addView(button)
         }
 
-        viewGroup.listViews.forEach {
+        viewGroup.getViews().forEach {
             it.click()
         }
     }

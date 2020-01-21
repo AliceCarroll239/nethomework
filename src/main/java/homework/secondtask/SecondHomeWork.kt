@@ -16,7 +16,7 @@ fun main() {
     //task 1
     niceLog("1")
     val newPerson = Hw21.Person(1, "newlogin", "Name", "Surname", "new", "")
-    println("First task result - person with fullname ${newPerson.fullname}")
+    println("First task result - person with fullname ${newPerson.get()}")
 
     //task 2
     niceLog("2")
@@ -29,7 +29,7 @@ fun main() {
         addView(button)
     }
 
-    viewGroup.listViews.forEach {
+    viewGroup.getViews().forEach {
         it.click()
     }
 

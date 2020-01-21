@@ -14,6 +14,6 @@ class Hw21Test {
             surname = "Carroll",
             status = "new",
             avatar = "")
-        Assert.assertEquals(newPerson.fullname, "Alice Carroll")
+        Assert.assertEquals(newPerson.get(), "Alice Carroll")
     }
 }
