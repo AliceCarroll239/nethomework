@@ -1,10 +1,11 @@
 package homework.secondtask
 
+import homework.secondtask.api.dao.VkWallDao
 import homework.secondtask.views.Button
 import homework.secondtask.views.TextView
 import homework.secondtask.views.ViewGroup
-import homework.secondtask.api.dao.VkWallList
-import homework.secondtask.api.dao.VkWallPost
+import homework.secondtask.api.model.VkWallList
+import homework.secondtask.api.model.VkWallPost
 import kotlinx.serialization.json.*
 import kotlin.reflect.full.declaredMemberProperties
 
@@ -35,7 +36,6 @@ fun main() {
     //task 3
     niceLog("3")
     val newPost = VkWallPost(
-        id = 1,
         author = "AliceCarroll",
         postName = "Hello World",
         canBeRepost = true
@@ -60,6 +60,38 @@ fun main() {
     println("Deserialize to Kotlin Object")
     objectFormatedData.list[0].javaClass.kotlin.declaredMemberProperties.forEach {
         println("Param ${it.name} of type ${it.returnType} with value ${it.get(newPost)}")
+    }
+
+    //task3 additional
+    niceLog("3 additional")
+    val newVKWall = VkWallDao()
+    val firstVKPost =  VkWallPost(
+        author = "AliceCarroll",
+        postName = "Hello World",
+        canBeRepost = true
+    )
+    val secondVKPost = VkWallPost(
+        author = "CheshirCat",
+        postName = "Hello Cat World",
+        canBeRepost = false
+    )
+
+    val thirdVKPost = VkWallPost(
+        author = "WhiteRabbit",
+        postName = "Hello Rabbit World",
+        canBeRepost = true
+    )
+
+    newVKWall.apply {
+        addPost(firstVKPost)
+        addPost(secondVKPost)
+        addPost(thirdVKPost)
+
+        for (i in 0..5) {
+            repost(postId = i)
+        }
+
+        showWall()
     }
 }
 
