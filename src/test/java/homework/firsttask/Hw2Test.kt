@@ -1,6 +1,6 @@
-package homework
+package homework.firsttask
 
-import org.testng.Assert
+import homework.firsttast.Hw2
 import org.testng.annotations.Test
 
 import org.testng.Assert.*

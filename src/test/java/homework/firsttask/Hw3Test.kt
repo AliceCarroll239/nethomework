@@ -1,5 +1,6 @@
-package homework
+package homework.firsttask
 
+import homework.firsttast.Hw3
 import org.testng.Assert.*
 import org.testng.annotations.DataProvider
 import org.testng.annotations.Test
@@ -13,7 +14,7 @@ class Hw3Test {
     @DataProvider(name = "homework3")
     fun provider(): Array<out Any> {
         return arrayOf(
-            Data(3600,  "Час назад")
+            Data(3600, "Час назад")
         )
     }
 

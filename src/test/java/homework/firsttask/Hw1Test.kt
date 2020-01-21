@@ -1,5 +1,6 @@
-package homework
+package homework.firsttask
 
+import homework.firsttast.Hw1
 import org.testng.Assert
 import org.testng.annotations.DataProvider
 import org.testng.annotations.Test

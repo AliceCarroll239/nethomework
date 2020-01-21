@@ -1,4 +1,4 @@
-package homework
+package homework.firsttast
 
 import kotlin.math.pow
 

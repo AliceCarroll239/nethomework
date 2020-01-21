@@ -1,4 +1,4 @@
-package homework
+package homework.firsttast
 
 fun main() {
     println("First homework task result is ${Hw1().calculateFee(ammount = 200, total = 11000)}")

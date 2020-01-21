@@ -4,7 +4,7 @@
 <suite name = "Suite">
     <test name = "homeworktest">
         <packages>
-            <package name="homework"/>
+            <package name="homework.secondtask"/>
         </packages>
     </test>
 </suite>
